@@ -3,11 +3,19 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-weight: inherit;
+  font-size: inherit;
 }
 
 body {
   font-family: "Urbanist", sans-serif;
   padding: 1.5rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .nav {
@@ -29,20 +37,21 @@ body {
   justify-content: space-evenly;
   align-items: center;
   background-color: #FFFFFF;
-  font-size: 2rem;
 }
 .nav__ul__button {
   text-decoration: none;
+  display: flex;
+  align-items: center;
   padding: 0.5rem 1rem;
   background-color: #FFFFFF;
   color: #0D1A2D;
   border-radius: 64px;
   border: 2px solid transparent;
-  transition: border 100ms ease-in, transform 100ms ease-in;
+  font-size: 2rem;
+  transition: border 100ms ease-in;
 }
 .nav__ul__button:hover {
   border-color: #637186;
-  transform: scale(1.05);
 }
 .nav__button--booknow {
   text-decoration: none;
@@ -179,7 +188,6 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 32px;
-  background-color: green;
 }
 .about__content__header {
   display: flex;
@@ -187,20 +195,138 @@ body {
   gap: 2rem;
   justify-content: space-between;
   width: 100%;
-  background-color: pink;
 }
 .about__content__header--title {
   text-decoration: none;
+  display: flex;
+  align-items: center;
   padding: 0.5rem 1rem;
   background-color: #FFFFFF;
   color: #0D1A2D;
   border-radius: 64px;
   border: 2px solid transparent;
-  transition: border 100ms ease-in, transform 100ms ease-in;
+  font-size: 2rem;
+  transition: border 100ms ease-in;
 }
 .about__content__header--title:hover {
   border-color: #637186;
-  transform: scale(1.05);
+}
+.about__content__header--title {
+  align-items: start;
+  height: clamp(30px, 4vh, 60px);
+}
+.about__content__header--description {
+  width: 50%;
+  font-size: clamp(2rem, 3vw, 4rem);
+  font-weight: 400;
+  text-align: justify;
+  color: #0D1A2D;
+}
+.about__content__cards {
+  flex: 4;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+}
+.about__content__footer {
+  flex: 1;
+  background-color: blue;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+  border-radius: 44px;
+  background-color: pink;
+}
+.card--game {
+  background-color: #0D1A2D;
+  gap: 4rem;
+  font-size: clamp(2rem, 3vw, 4rem);
+  font-weight: 400;
+  color: #637186;
+}
+.card__icon {
+  font-size: 92px;
+  color: #FFFFFF;
+}
+.card__description--highlight {
+  color: #FFFFFF;
+}
+.card--lessons {
+  background-image: url(/images/AboutContent__Cardlessons.jpg);
+  background-position: 50% 72%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card__link {
+  padding: 0.7rem 1.5rem 0.7rem;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.3) 40%, rgba(255, 255, 255, 0.05));
+  border-radius: 64px;
+  text-align: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  backdrop-filter: blur(2px);
+  font-size: clamp(3rem, 4vw, 5rem);
+}
+.card--data {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  gap: 2rem;
+  background-color: #F7FCFF;
+}
+.card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.card__info--title {
+  font-size: clamp(6rem, 8vw, 10rem);
+  font-weight: 500;
+}
+.card__info--subtitle {
+  font-size: clamp(1.5rem, 2.5vw, 3.5rem);
+  font-weight: 300;
+}
+.card__info--description {
+  font-size: clamp(1rem, 2vw, 3rem);
+  font-weight: 300;
+  color: #637186;
+}
+.card__info2 {
+  display: grid;
+  grid-template-columns: 2fr 5fr 1fr;
+  flex: 1;
+  gap: 1rem;
+  background-color: green;
+}
+.card__info2--niveles {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: clamp(0.75rem, 1.75vw, 2.75rem);
+  font-weight: 450;
+  color: #0D1A2D;
+}
+.card__info2--graficos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: clamp(0.75rem, 1.75vw, 2.75rem);
+  font-weight: 450;
+  color: #0D1A2D;
+}
+.card__info2--numeros {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: clamp(0.75rem, 1.75vw, 2.75rem);
+  font-weight: 450;
+  color: #0D1A2D;
 }
 
 /*# sourceMappingURL=styles.css.map */

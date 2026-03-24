@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
     <header>
 
         <nav class="nav">
@@ -80,24 +81,40 @@
             </div>
 
             <div class="about__content__cards">
-                <article>
-                    <img src="" alt="">
-                    <p></p>
-                    <div>
-                        <p>cosa</p>
-                        <p>Game Mode</p>
-                    </div>
+                <article class="card card--game">
+                    <ion-icon name="medal-outline" class="card__icon"></ion-icon>
+                    <p class="card__description">
+                        <span class="card__description--highlight">Profesional Hard Courts</span> with tournament-grade lighting & climate control 
+                        - play <span class="card__description--highlight">in perfect conditions, in any season.</span>
+                    </p>
+                    <p class="card__tag">Game Mode</p>
                 </article>
-                <article>
-                    <a href="">Private & Group Lessons</a>
+                <article class="card card--lessons">
+                    <a href="" class="card__link">Private & Group Lessons</a>
                 </article>
-                <article>
-                    <div>
-                        <h2>100 +</h2>
-                        <h3>Pro coaches</h3>
-                        <p>Certified professionals ready to boost your game from first spike to tournament level.</p>
+                <article class="card card--data">
+                    <div class="card__info">
+                        <h2 class="card__info--title">100 +</h2>
+                        <h3 class="card__info--subtitle">Pro coaches</h3>
+                        <p class="card__info--description">Certified professionals ready to boost your <br> 
+                            game from first spike to tournament level.</p>
                     </div>
-                    <div>
+                    <div class="card__info2">
+                        <div class="card__info2--niveles">
+                            <h3>Begginer</h3>
+                            <h3>Intermediate</h3>
+                            <h3>Advanced</h3>
+                        </div>
+                        <div class="card__info2--graficos">
+                            <h3>Begginer</h3>
+                            <h3>Intermediate</h3>
+                            <h3>Advanced</h3>            
+                        </div>
+                        <div class="card__info2--numeros">
+                            <p>55</p>
+                            <p>40</p>
+                            <p>35</p>
+                        </div>
                     </div>
                 </article>
             </div>
@@ -127,6 +144,10 @@
         </section>
 
     </main>
-    
+
+
+    <!-- Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
