@@ -1,0 +1,121 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    min-height: 80vh;
+    padding: 2rem;
+    border-radius: 32px;
+    background-image: url(/images/Hero__mainImg.jpg);
+    background-position: 10% 72%;
+
+    &__content1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        flex: 8;
+        width: 60%;
+
+        &__title {
+            font-size: clamp(3rem, 7vw, 6rem);
+            font-weight: 300;
+            text-align: center;
+            color: $color-white;
+        }
+
+        &__subtitle {
+            font-size: clamp(1.8rem, 2.8vw, 3.8rem);
+            font-weight: 200;
+            text-align: center;
+            color: $color-white;
+        }
+
+        &__cta {
+            @include btn_cta();
+        }
+    }
+
+    &__content2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex: 2;
+        width: 100%;
+
+        &__trainers {
+            display: flex;
+            align-items: center;
+            position: relative;
+            gap: 2rem;
+            padding: 0.7rem 1.5rem;
+            font-size: 1.75rem;
+            text-decoration: none;
+            color: $color-white;
+            border-radius: 64px;
+
+            &__link {
+                position: absolute;
+                inset: 0;
+            }
+
+            &__span {
+                padding: 1rem;
+            }
+
+            &__div {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: .75rem;
+                background: linear-gradient(
+                    to right,
+                    rgba(255, 255, 255, 0.3) 40%,
+                    rgba(255, 255, 255, 0.05)
+                );
+                border-radius: 64px;
+
+                &--img {
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                    object-fit: cover;
+
+                    &:nth-child(2) {
+                        margin-left: -20px;
+                    }
+
+                    &:nth-child(3) {
+                        margin-left: -20px;
+                    }
+                }
+            }
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        &__social {
+            display: flex;
+            gap: 1rem;
+            list-style-type: none;
+
+            &--link {
+                font-size: 1.75rem;
+                text-decoration: underline;
+                color: $color-white;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}

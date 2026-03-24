@@ -1,0 +1,49 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+
+.facts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex: 3;
+    width: 100%;
+    padding: 2rem;
+
+    &__title {
+        display: flex;
+        align-items: center;
+        flex: 3;
+        font-size: clamp(2.5rem, 4vw, 5.5rem);
+        font-weight: 300;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        flex: 2;
+        gap: 2rem;
+        width: 100%;
+        padding: 2rem;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__number {
+        font-size: clamp(5rem, 6.5vw, 8rem);
+        font-weight: 700;
+    }
+
+    &__label {
+        font-size: clamp(1rem, 2.5vw, 3rem);
+        font-weight: 300;
+        color: $color-slate;
+    }
+}

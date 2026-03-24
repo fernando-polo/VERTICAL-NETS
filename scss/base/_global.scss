@@ -1,0 +1,12 @@
+@use '../abstracts/variables' as *;
+
+body {
+    font-family: $main-font;
+    padding: 1.5rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
