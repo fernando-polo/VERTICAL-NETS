@@ -23,6 +23,7 @@ main {
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
+  min-height: 15vh;
   background-color: #FFFFFF;
 }
 .nav__title {
