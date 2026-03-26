@@ -1,0 +1,13 @@
+@use '../abstracts/variables' as *;
+
+.graph__container {
+    display: flex;
+    gap: .75rem;
+
+    &--circle {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background-color: $color-sky;
+    }
+}

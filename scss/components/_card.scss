@@ -1,0 +1,92 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+    border-radius: 44px;
+
+    &--game {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        font-size: clamp(2rem, 3vw, 4rem);
+        font-weight: 400;
+        color: $color-slate;
+        background-color: $color-midnight;
+    }
+
+    &__icon {
+        font-size: 92px;
+        color: $color-white;
+    }
+
+    &__description {
+        &--highlight {
+            color: $color-white;
+        }
+    }
+
+    &--lessons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url(/images/AboutContent__Cardlessons.jpg);
+        background-position: 50% 72%;
+    }
+
+    &__link {
+        @include highlight();
+        font-size: clamp(3rem, 4vw, 5rem);
+    }
+
+    &--data {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 3rem;
+        background-color: $color-frost;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        &--title {
+            font-size: clamp(6rem, 8vw, 10rem);
+            font-weight: 500;
+        }
+
+        &--subtitle {
+            font-size: clamp(1.5rem, 2.5vw, 3.5rem);
+            font-weight: 300;
+        }
+
+        &--description {
+            font-size: clamp(1rem, 2vw, 3rem);
+            font-weight: 300;
+            color: $color-slate;
+        }
+    }
+
+    &__info2 {
+        display: grid;
+        grid-template-columns: 2fr 5fr 1fr;
+        flex: 1;
+        gap: 1rem;
+
+        &--niveles {
+            @include grid-column-data-cardInfo2();
+        }
+
+        &--graficos {
+            @include grid-column-data-cardInfo2();
+        }
+
+        &--numeros {
+            @include grid-column-data-cardInfo2();
+        }
+    }
+}

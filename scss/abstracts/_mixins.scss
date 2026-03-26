@@ -1,0 +1,62 @@
+@use '../abstracts/variables' as *;
+
+
+@mixin btn_cta() {
+    display: flex;
+    align-items: center;
+    padding: 0.7rem 1.5rem;
+    font-size: 2rem;
+    text-decoration: none;
+    color: $color-white;
+    background-color: $color-midnight;
+    border-radius: 64px;
+    transition: 
+        background-color 100ms ease-in, 
+        transform 100ms ease-in;
+
+    &:hover {
+        background-color: $color-sky;
+        transform: scale(1.02);
+    }
+}
+
+@mixin btn_secundario() {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    color: $color-midnight;
+    background-color: $color-white;
+    border: 2px solid transparent;
+    border-radius: 64px;
+    transition: border 100ms ease-in;
+
+    &:hover {
+        border-color: $color-slate;
+    }
+}
+
+@mixin highlight() {
+    display: flex;
+    padding: 0.7rem 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    color: $color-white;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.3) 40%, 
+        rgba(255, 255, 255, 0.05)  
+    );
+    border-radius: 64px;
+    backdrop-filter: blur(2px);
+}
+
+@mixin grid-column-data-cardInfo2() {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: clamp(.75rem, 1.75vw, 2.75rem);
+    font-weight: 450;
+    color: $color-midnight;
+}

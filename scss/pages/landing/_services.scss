@@ -1,0 +1,121 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+
+.services {
+    display: flex;
+    min-height: 60vh;
+    padding: 2rem;
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 3fr 3fr 2fr;
+        flex: 1;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    &__intro {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem;
+
+        &-title {
+            font-size: clamp(1.5rem, 3.5vw, 5.5rem);
+            font-weight: 500;
+        }
+    }
+
+    &__label {
+        @include btn_secundario();
+        width: fit-content;
+        align-items: start;
+        height: clamp(30px, 4vh, 60px);
+    }
+
+    &__label--highlight {
+        @include highlight();
+        width: fit-content;
+        font-size: clamp(1rem, 2vw, 3rem);
+    }
+
+    &__cta {
+        @include btn_cta();
+        width: fit-content;
+        margin-top: auto;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem;
+        border-radius: 64px;
+
+        &--programs {
+            background-image: url('/images/Services_card1.jpg');
+            background-position: 80% 65%;
+        }
+
+        &--court {
+            display: flex;
+            flex-direction: column;
+
+            .services__card-description {
+                color: $color-midnight;
+            }
+
+            .services__card-nav-btn {
+                color: $color-midnight;
+            }
+        }
+
+        &-header {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            padding: 2rem;
+            background-image: url('/images/Services_card2.jpg');
+            background-size: cover;
+            border-radius: 64px;
+        }
+
+        &-footer {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 2rem;
+            margin-top: auto;
+            color: $color-midnight;
+        }
+
+        &-description {
+            font-size: clamp(1rem, 2.5vw, 3rem);
+            font-weight: 300;
+            color: $color-white;
+        }
+
+        &-icon {
+            font-size: 64px;
+            color: $color-white;
+        }
+
+        &-title {
+            font-size: clamp(1rem, 2.5vw, 3rem);
+            font-weight: 300;
+            color: $color-white;
+            margin-top: auto;
+        }
+
+        &-nav {
+            display: flex;
+            gap: 2rem;
+
+            &-btn {
+                font-size: 48px;
+                color: $color-white;
+            }
+        }
+    }
+}
