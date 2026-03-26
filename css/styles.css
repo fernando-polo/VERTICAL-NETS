@@ -70,6 +70,52 @@ main {
   transform: scale(1.02);
 }
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  min-height: 30vh;
+  padding: 2rem;
+  color: #FFFFFF;
+  background-color: #0D1A2D;
+}
+.footer__grid {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  flex: 1;
+}
+.footer__title {
+  font-size: clamp(8rem, 10vw, 14rem);
+  font-weight: 600;
+}
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  font-size: clamp(0.5rem, 1.5vw, 2.5rem);
+  font-weight: 400;
+}
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.footer__nav-title {
+  font-size: clamp(1rem, 2vw, 3rem);
+  font-weight: 400;
+}
+.footer__nav-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.footer__nav-item {
+  text-decoration: none;
+  font-size: clamp(0.5rem, 1.5vw, 2.5rem);
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -514,6 +560,155 @@ main {
 .services__card-nav-btn {
   font-size: 48px;
   color: #FFFFFF;
+}
+
+.memberships {
+  min-height: 70vh;
+  display: flex;
+  padding: 2rem;
+  align-items: center;
+}
+.memberships__grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  flex: 1;
+  gap: 10rem;
+}
+.memberships__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.memberships__card {
+  padding: 2rem;
+  border-radius: 32px;
+  background-color: #2EB2FF;
+}
+.memberships__card--pro {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.memberships__card--basic {
+  display: flex;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+}
+.memberships__card--elite {
+  display: flex;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+}
+.memberships__card-heading {
+  display: flex;
+  justify-content: space-between;
+  font-size: clamp(2.75rem, 5.25vw, 5.75rem);
+  font-weight: 500;
+  color: #FFFFFF;
+}
+.memberships__card-title {
+  font-size: clamp(2.75rem, 5.25vw, 5.75rem);
+  font-weight: 500;
+  color: #FFFFFF;
+}
+.memberships__card-subtitle {
+  font-size: clamp(2.75rem, 5.25vw, 5.75rem);
+  font-weight: 400;
+  color: #637186;
+}
+.memberships__card-price {
+  font-weight: 500;
+  color: #FFFFFF;
+}
+.memberships__card-price-span {
+  font-size: clamp(1rem, 2.5vw, 3rem);
+  font-weight: 500;
+  color: #FFFFFF;
+}
+.memberships__card-details {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  font-size: clamp(0.75rem, 1.75vw, 2.5rem);
+  font-weight: 500;
+  color: #FFFFFF;
+}
+.memberships__card-cta {
+  display: flex;
+  align-items: center;
+  padding: 0.7rem 1.5rem;
+  font-size: 2rem;
+  text-decoration: none;
+  color: #FFFFFF;
+  background-color: #0D1A2D;
+  border-radius: 64px;
+  transition: background-color 100ms ease-in, transform 100ms ease-in;
+}
+.memberships__card-cta:hover {
+  background-color: #2EB2FF;
+  transform: scale(1.02);
+}
+.memberships__card-cta {
+  width: fit-content;
+  background-color: #637186;
+}
+.memberships__highlight {
+  display: flex;
+  padding: 0.7rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  color: #FFFFFF;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.3) 40%, rgba(255, 255, 255, 0.05));
+  border-radius: 64px;
+  backdrop-filter: blur(2px);
+  font-size: clamp(1rem, 2.5vw, 3rem);
+  font-weight: 500;
+  color: #FFFFFF;
+  width: fit-content;
+}
+.memberships__info {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 2rem;
+  border-radius: 32px;
+}
+.memberships__info-highlight {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  text-decoration: none;
+  color: #0D1A2D;
+  background-color: #FFFFFF;
+  border: 2px solid transparent;
+  border-radius: 64px;
+  transition: border 100ms ease-in;
+}
+.memberships__info-highlight:hover {
+  border-color: #637186;
+}
+.memberships__info-highlight {
+  width: fit-content;
+  color: #0D1A2D;
+}
+.memberships__info-title {
+  font-size: clamp(2rem, 4.5vw, 5rem);
+  font-weight: 600;
+  color: #0D1A2D;
+}
+.memberships__info-description {
+  font-size: clamp(1.5rem, 3vw, 4rem);
+  font-weight: 300;
+  color: #637186;
+}
+.memberships__info-icon {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 300px;
+  color: #637186;
+  opacity: 0.1;
 }
 
 /*# sourceMappingURL=styles.css.map */

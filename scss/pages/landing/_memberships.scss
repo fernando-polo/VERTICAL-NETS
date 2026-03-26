@@ -1,0 +1,144 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+.memberships {
+  min-height: 70vh;
+  display: flex;
+  padding: 2rem;
+  align-items: center;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    flex: 1;
+    gap: 10rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  // BASE DE TODAS LAS CARDS
+  &__card {
+    padding: 2rem;
+    border-radius: 32px;
+    background-color: $color-sky;
+
+    // MODIFICADORES
+    &--pro {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    &--basic {
+      display: flex;
+      justify-content: space-between;
+      background-color: $color-white;
+    }
+
+    &--elite {
+      display: flex;
+      justify-content: space-between;
+      background-color: $color-white;
+    }
+
+    // ELEMENTOS INTERNOS
+    &-heading {
+      display: flex;
+      justify-content: space-between;
+      font-size: clamp(2.75rem, 5.25vw, 5.75rem);
+      font-weight: 500;
+      color: $color-white;
+    }
+
+    &-title {
+      font-size: clamp(2.75rem, 5.25vw, 5.75rem);
+      font-weight: 500;
+      color: $color-white;
+    }
+
+    &-subtitle {
+      font-size: clamp(2.75rem, 5.25vw, 5.75rem);
+      font-weight: 400;
+      color: $color-slate;
+    }
+
+    &-price {
+      font-weight: 500;
+      color: $color-white;
+    }
+
+    &-price-span {
+      font-size: clamp(1rem, 2.5vw, 3rem);
+      font-weight: 500;
+      color: $color-white;
+    }
+
+    &-details {
+      display: flex;
+      justify-content: space-between;
+      list-style-type: none;
+      font-size: clamp(.75rem, 1.75vw, 2.5rem);
+      font-weight: 500;
+      color: $color-white;
+    }
+
+    &-cta {
+      @include btn_cta();
+      width: fit-content;
+
+      background-color: $color-slate;
+    }
+  }
+
+  &__highlight {
+    @include highlight;
+    font-size: clamp(1rem, 2.5vw, 3rem);
+    font-weight: 500;
+    color: $color-white;
+    width: fit-content;
+  }
+
+  // INFO COLUMN
+  &__info {
+    display: flex;
+    flex-direction: column;
+
+    padding: 2rem;
+    gap: 2rem;
+    border-radius: 32px;
+
+
+    &-highlight {
+      @include btn_secundario();
+      width: fit-content;
+
+      color: $color-midnight;
+    }
+
+    &-title {
+        font-size: clamp(2rem, 4.5vw, 5rem);
+        font-weight: 600;
+        color: $color-midnight;
+    }
+
+    &-description {
+        font-size: clamp(1.5rem, 3vw, 4rem);
+        font-weight: 300;
+        color: $color-slate;
+    }
+
+    &-icon{
+        display: flex;
+        align-items: center;
+
+        width: 100%;
+        font-size: 300px;
+        color: $color-slate;
+        opacity: 0.1;
+    }
+  }
+}
